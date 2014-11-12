@@ -1,0 +1,29 @@
+replace if(i == 3) with if(3 == i)
+
+reading ansi c for profit
+
+First Time Through
+generate_initializer(char * string)
+{
+static char separator='';
+printf( "%c %s \n", separator, string);
+separator = ',';
+}
+
+/*file copy*/
+main()
+{
+char ch;
+while((ch = getchar()) != EOF)
+	putchar();
+}
+
+names:
+s, t for strings
+p, q for points
+i, j for loops
+local variable : nsth if perfered (numberofsomthing)
+
+idioms :
+1.removing the last character from a string
+date[strlen[date] - 1] = '\0'
