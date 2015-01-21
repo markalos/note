@@ -30,3 +30,15 @@ so it's wrong to write such code :#define EOF -1
 instead it should be like this:#define EOF (-1)
 
 #define iseven(n) ((n & 1) == 0)
+
+//test nested comment
+int a = /*/*/0*/**/1;
+
+don’t use side effects except for a very few idiomatic constructions like
+a[i++] = 0;
+c = *p++;
+*s++ = *t++;
+
+don’t compare a char to EOF
+always use sizeof to compute the size of types and objects
+never right shift a signed value
