@@ -42,3 +42,14 @@ c = *p++;
 don’t compare a char to EOF
 always use sizeof to compute the size of types and objects
 never right shift a signed value
+
+
+long pow(long base, int exp) {
+    long result = 1;
+    while (exp > 0) {
+        if (exp & 1) result *= base;
+        exp >>= 1;
+        base *= base;
+    }
+    return result;
+}
