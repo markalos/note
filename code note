@@ -1,0 +1,55 @@
+const type m;限定m不可变
+& is a good operation.
+If a method needs to compute a new class object, you should see if you can use a class
+constructor to do the work. Not only does that save you trouble, it ensures that the new
+object is constructed in the proper fashion.
+passing by value means creating a copy of the original variable.
+The default copy constructor performs a member-by-member copy of the nonstatic
+members
+
+returning an object invokes the copy constructor, whereas returning a reference doesn’t
+
+If you don’t supply a base-class constructor in a member initializer list, the program uses the default base-class constructor.
+
+You need to be alert to opportunities to use const.You can use it to guarantee that a
+method doesn’t modify an argument:
+Star::Star(const char * s) {...} // won't change the string to which s points
+You can use const to guarantee that a method won’t modify the object that invokes it:
+void Star::show() const {...} // won't change invoking object
+
+There is one advantage to enums: unlike #defined names which are typically discarded
+during compilation, enum names usually persist through to the debugger, and can be used while
+debugging your code.
+
+printf(pivot ? "true" : "false");
+    printf("%s", pivot ? "true" : "false");
+    fputs(pivot ? "true" : "false", stdout);
+
+it is important to remember that #define only replace identifier
+so it's wrong to write such code :#define EOF -1
+instead it should be like this:#define EOF (-1)
+
+#define iseven(n) ((n & 1) == 0)
+
+//test nested comment
+int a = /*/*/0*/**/1;
+
+don’t use side effects except for a very few idiomatic constructions like
+a[i++] = 0;
+c = *p++;
+*s++ = *t++;
+
+don’t compare a char to EOF
+always use sizeof to compute the size of types and objects
+never right shift a signed value
+
+
+long pow(long base, int exp) {
+    long result = 1;
+    while (exp > 0) {
+        if (exp & 1) result *= base;
+        exp >>= 1;
+        base *= base;
+    }
+    return result;
+}
