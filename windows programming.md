@@ -7,3 +7,7 @@ https://github.com/msushkov/cs156b.git
 edit registry
 1.Open regedit (Win+R, type "regedit", select OK).
 2.HKEY_CLASSES_ROOT\Applications\sublime_text.exe\shell\open\command
+
+
+Get-Process | findstr [python]
+Stop-Process -Name [python]
