@@ -8,6 +8,12 @@ edit registry
 1.Open regedit (Win+R, type "regedit", select OK).
 2.HKEY_CLASSES_ROOT\Applications\sublime_text.exe\shell\open\command
 
+# win cmd
 
-Get-Process | findstr [python]
-Stop-Process -Name [python]
+- kill process by name
+
+  ```powershell
+  Get-Process | findstr [python]
+  Stop-Process -Name [python]
+  ```
+
